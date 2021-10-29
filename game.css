@@ -1,0 +1,60 @@
+body {
+    color: white;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg,rgb(211, 146, 61), yellow )100%;    font-size: 3rem;
+    min-width: 50rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgb(10, 10, 10);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 3rem;
+    color:black;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+    color: black;
+}
+
+.correct {
+    background: linear-gradient(32deg, green,green)100%;
+}
+
+.incorrect {
+    background: linear-gradient(32deg, red, red)100%;
+}
+
+@media screen and (max-width: 769px){
+    .choice-container {
+        min-width: 40rem;
+    }
+}
+
+/* Heads up Display*/
+
+#progressText {
+display: flex center;
+}
+    
+
+.hud-prefix {
+text-align: center;
+font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
