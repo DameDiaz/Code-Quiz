@@ -12,16 +12,16 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'What is 2 + 2?',
-        choice1:'2',
-        choice2:'4',
-        choice3:'21',
-        choice4:'17',
+        question: 'What special character is used to determine a class in CSS?',
+        choice1:'.',
+        choice2:'#',
+        choice3:'$',
+        choice4:'@',
         answer: 1,
     },
 
     {
-        question: 'What is 2 + 2?',
+        question: '?',
         choice1:'2',
         choice2:'4',
         choice3:'21',
