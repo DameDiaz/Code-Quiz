@@ -21,7 +21,7 @@ let questions = [
     },
 
     {
-        question: 'What tag is used to define – and place – an interactive button in an HTML document??',
+        question: 'What tag is used to define – and place – an interactive button in an HTML document?',
         choice1:'<clickfield>',
         choice2:'<footer>',
         choice3:'<td>',
@@ -66,6 +66,50 @@ getNewQuestion = () => {
     }
 
     questionCounter++
-    progressText.innerText = 'Question ${questionCounter} of ${MAX_QUESTIONS}'
 
+    var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    currentQuestion = availableQuestions[questionsIndex]
+    question.innerText = currentQuestion.question
+    
+    choices.forEach(choice => {
+        var number = choice.dataset['number']
+        choice.innerText = currentQuestion['choice' + number]
+    })
+
+    availableQuestions.splice(questionsIndex, 1)
+
+    acceptingAnswers = true
 }
+
+choices.forEach(choice => {
+    choice.addEventListener('click', e => {
+        if(!acceptingAnswers) return
+        
+        acceptingAnswers = false
+        var selectedChoice = e.target
+        var selectedAnswer = selectedChoice.dataset['number']
+
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
+        'incorrect'
+
+        if(classToApply === 'correct') {
+            incrementScore(SCORE_POINTS)
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply)
+
+        setTimeout(() =>{
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+
+        }, 1000)
+
+    })
+})
+
+incrementScore = num => {
+    score +=num
+    scoreText.innerText = score
+}
+
+startGame()

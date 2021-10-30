@@ -29,6 +29,15 @@ body {
     color: black;
 }
 
+#question {
+    font-size: 27px;
+    color: black;
+}
+
+#score {
+    font-size: 45px;
+}
+
 .correct {
     background: linear-gradient(32deg, green,green)100%;
 }
@@ -39,7 +48,7 @@ body {
 
 @media screen and (max-width: 769px){
     .choice-container {
-        min-width: 40rem;
+        min-width: 1rem;
     }
 }
 
@@ -57,4 +66,5 @@ font-size: 2rem;
 
 .hud-main-text {
     text-align: center;
+    font-size: 2rem;
 }
