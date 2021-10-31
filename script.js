@@ -5,7 +5,6 @@ var progressText = document.querySelector('progressText');
 var scoreText = document.querySelector('#score');
 
 
-let time = startMinute * 60;
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
