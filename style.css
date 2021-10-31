@@ -135,5 +135,12 @@ input::placeholder {
 .fa-home {
     margin-left: 1rem;
     font-size: 2rem;
-    color: black;
+    color: 
+    black;
+}
+
+.btn {
+    display: flex;
+    text-align: center;
+    margin-right: auto;
 }
