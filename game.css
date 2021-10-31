@@ -1,5 +1,6 @@
 body {
     color: white;
+    margin: 0;
 }
 
 .choice-container {
@@ -37,6 +38,15 @@ body {
 #score {
     font-size: 45px;
 }
+
+#countdown {
+    display: inline-flex;
+    font-size: 50px;
+    height: 70px;
+    width: 200px;
+    color: rgb(238, 255, 5);
+}
+
 
 .correct {
     background: linear-gradient(32deg, green,green)100%;
